@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 3px;
+  transition: transform 200s;
+}
+
+$btn-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  tertiary: $tertiary-color
+);
+
+@each $color, $value in $btn-colors {
+  .btn-#{$color} {
+    background-color: $value;
+    color: $light-color;
+  }
+}
